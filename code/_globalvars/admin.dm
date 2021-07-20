@@ -18,7 +18,7 @@ GLOBAL_PROTECT(non_ascii_regex)
 /////Returns true if this contains text that is not ASCII
 //#define NON_ASCII_CHECK(text) (findtext(text, GLOB.non_ascii_regex))
 ///Return false because why not
-#define NON_ASCII_CHECK(text) return FALSE
+#define NON_ASCII_CHECK(text) FALSE
 
 GLOBAL_LIST_EMPTY(custom_loadouts)
 
