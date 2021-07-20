@@ -17,6 +17,7 @@ tools/MapDaemon/logs/*.txt
 
 #don't touch my configs
 config/*
+!/config/example/
 
 #Visual studio stuff
 *.vscode/*
