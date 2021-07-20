@@ -16,7 +16,7 @@ tools/Runtime Condenser/Output.txt
 tools/MapDaemon/logs/*.txt
 
 #don't touch my configs
-config/
+config/*
 
 #Visual studio stuff
 *.vscode/*
