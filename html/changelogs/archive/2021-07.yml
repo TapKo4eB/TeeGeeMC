@@ -421,3 +421,29 @@
   - rscdel: Removed the drills from the surgery trays and vests. You can still print
       one at a lathe if you're really torn up by their loss.
   - bugfix: Larva now start growing again if their host stops being dead.
+2021-07-20:
+  BraveMole:
+  - bugfix: Minigun no longer has aimbot
+  - bugfix: Fix runtime in gun system
+  - bugfix: Fix shutters being crushable by tadpole
+  - balance: Remove the scope from TX_11 in hvh
+  QualityVan:
+  - bugfix: Vali should have fewer typos and more accurately express the current power
+      level.
+2021-07-21:
+  BraveMole:
+  - bugfix: Fix mines not blowing up xeno
+  Hekzder:
+  - bugfix: Fixes NTOS crash on job prefs, round start text for MD and CMO, and missing
+      hud icon for MD.
+  InterroLouis:
+  - bugfix: Fixed doubled job slots, now rebel jobs have their own job slots that
+      can be altered separately from regular job slots.
+  - spellcheck: Fixed medical researcher job display order.
+  Surrealaser:
+  - bugfix: Fixes issue where light neurotoxin wasn't being reported by Xeno Toxin
+      HUD.
+  - qol: HUD elements for high concentrations of xeno toxins (more than 10U) now blink.
+2021-07-22:
+  InterroLouis:
+  - bugfix: Triumph shuttle has appropriate intercoms.
