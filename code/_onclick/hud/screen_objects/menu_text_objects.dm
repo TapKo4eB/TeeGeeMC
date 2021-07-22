@@ -29,24 +29,24 @@
 	return
 
 /obj/screen/text/lobby/title
-	maptext = "<span class=menutitle>Welcome to TGMC</span>"
+	maptext = "<span class=menutitle>Welcam to TeeGeeMC!!1</span>"
 
 /obj/screen/text/lobby/title/Initialize()
 	. = ..()
-	maptext = "<span class=menutitle>Welcome to TGMC[SSmapping?.configs ? " - [SSmapping.configs[SHIP_MAP].map_name]" : ""]</span>"
+	maptext = "<span class=menutitle>Welcam to TeeGeeMC!!1[SSmapping?.configs ? " - [SSmapping.configs[SHIP_MAP].map_name]" : ""]</span>"
 
 
 /obj/screen/text/lobby/year
-	maptext = "<span class=menutext>Current Year: Loading...</span>"
+	maptext = "<span class=menutext>Crent Ear: Wait a little...</span>"
 
 /obj/screen/text/lobby/year/Initialize()
 	. = ..()
-	maptext = "<span class=menutext>Current Year: [GAME_YEAR]</span>"
+	maptext = "<span class=menutext>Crent Ear: [GAME_YEAR]</span>"
 
 
 /obj/screen/text/lobby/owners_char
 	screen_loc = "CENTER-7,CENTER-7"
-	maptext = "<span class=menutext>Loading...</span>"
+	maptext = "<span class=menutext>Loding...</span>"
 	///Bool, whether we registered to listen for charachter updates already
 	var/registered = FALSE
 
@@ -58,7 +58,7 @@
 	set_text()
 
 /obj/screen/text/lobby/owners_char/set_text()
-	maptext = "<span class=menutext>Current character: [hud.mymob.client ? hud.mymob.client.prefs.real_name : "Unknown User"]</span>"
+	maptext = "<span class=menutext>Curet chaacter: [hud.mymob.client ? hud.mymob.client.prefs.real_name : "wtf"]</span>"
 	if(!registered)
 		RegisterSignal(hud.mymob.client, COMSIG_CLIENT_PREFERENCES_UIACTED, .proc/set_text)
 		registered = TRUE
@@ -89,7 +89,7 @@
 
 
 /obj/screen/text/lobby/clickable/setup_character
-	maptext = "<span class=menutext>Setup Character</span>"
+	maptext = "<span class=menutext>Soup Cherakter</span>"
 
 /obj/screen/text/lobby/clickable/setup_character/Click()
 	. = ..()
@@ -97,7 +97,7 @@
 
 
 /obj/screen/text/lobby/clickable/join_game
-	maptext = "<span class=menutext>Join Game</span>"
+	maptext = "<span class=menutext>PLAY!!!</span>"
 
 /obj/screen/text/lobby/clickable/join_game/Click()
 	. = ..()
@@ -107,7 +107,7 @@
 
 /obj/screen/text/lobby/clickable/observe
 	screen_loc = "CENTER"
-	maptext = "<span class=menutext>Observe</span>"
+	maptext = "<span class=menutext>be gost</span>"
 
 /obj/screen/text/lobby/clickable/observe/Click()
 	. = ..()
@@ -116,7 +116,7 @@
 
 
 /obj/screen/text/lobby/clickable/ready
-	maptext = "<span class=menutext>You are: Not Ready</span>"
+	maptext = "<span class=menutext>U a: sussy baka</span>"
 
 /obj/screen/text/lobby/clickable/ready/Initialize(mapload)
 	. = ..()
@@ -127,7 +127,7 @@
 
 /obj/screen/text/lobby/clickable/ready/set_text()
 	var/mob/new_player/player = hud.mymob
-	maptext = "<span class=menutext>You are: [player.ready ? "" : "Not "]Ready</span>"
+	maptext = "<span class=menutext>U a: [player.ready ? "" : "NOT "]lok'n loaded</span>"
 
 /obj/screen/text/lobby/clickable/ready/Click()
 	. = ..()
@@ -136,7 +136,7 @@
 	set_text()
 
 /obj/screen/text/lobby/clickable/manifest
-	maptext = "<span class=menutext>View Manifest</span>"
+	maptext = "<span class=menutext>vieve manifesto</span>"
 
 /obj/screen/text/lobby/clickable/manifest/Click()
 	. = ..()
@@ -144,7 +144,7 @@
 	player.view_manifest()
 
 /obj/screen/text/lobby/clickable/background
-	maptext = "<span class=menutext>Background</span>"
+	maptext = "<span class=menutext>zadnii plan</span>"
 
 /obj/screen/text/lobby/clickable/background/Click()
 	. = ..()
@@ -153,7 +153,7 @@
 
 
 /obj/screen/text/lobby/clickable/changelog
-	maptext = "<span class=menutext>Changelog</span>"
+	maptext = "<span class=menutext>chengess</span>"
 
 /obj/screen/text/lobby/clickable/changelog/Click()
 	. = ..()
@@ -161,7 +161,7 @@
 
 
 /obj/screen/text/lobby/clickable/polls
-	maptext = "<span class=menutext>Polls</span>"
+	maptext = "<span class=menutext>POOLZ</span>"
 
 /obj/screen/text/lobby/clickable/polls/Initialize(mapload, atom/one, atom/two)
 	. = ..()
@@ -175,9 +175,9 @@
 	var/mob/new_player/player = hud.mymob
 	var/hasnewpolls = player.check_playerpolls()
 	if(isnull(hasnewpolls))
-		maptext = "<span class=menutext>No Database!</span>"
+		maptext = "<span class=menutext>netu! db!!1</span>"
 		return
-	maptext = "<span class=menutext>Show Polls[hasnewpolls ? " (NEW!)" : ""]</span>"
+	maptext = "<span class=menutext>Snow POOLZ[hasnewpolls ? " (NEWZ!!)" : ""]</span>"
 
 /obj/screen/text/lobby/clickable/polls/Click()
 	. = ..()
