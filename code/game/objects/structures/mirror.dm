@@ -25,12 +25,14 @@
 /obj/structure/mirror/broken
 	icon_state = "mirror_broke"
 	shattered = TRUE
+	desc = "Mirror mirror on the wall, give me torture cock and ball."
 
 /obj/structure/mirror/attack_hand(mob/living/user)
 	. = ..()
 	if(.)
 		return
 	if(shattered)
+		to_chat(user, "<span class='notice'>Examining this mirror leads you to the thought that it can't help you with any purpose you could think of.</span>")
 		return
 
 	if(ishuman(user))
