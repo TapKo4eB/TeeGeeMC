@@ -94,6 +94,11 @@
 		if(INTENT_HARM)
 			visible_message("[usr] punches the [src] while letting out a muttered curse.")
 
+/obj/structure/shipmast/benismast
+	name = "\the Benis)) Mast"
+	icon_state = "benismast"
+	desc = "A piece of old ea-... Wait why there is a penis in a middle of a corridor? The plaque read<br><br><span class='name'>СКВФХ Benis)) Sailed 2020 to 2007.</span><br><span class='name'>Relaunched 2415.</span><br><span class='name'>On loan from the Some Schizo Lord.</span><br><br>"
+
 //ICE COLONY RESEARCH DECORATION-----------------------//
 //Most of icons made by ~Morrinn
 obj/structure/xenoautopsy
