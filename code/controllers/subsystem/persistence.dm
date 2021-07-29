@@ -94,9 +94,9 @@ SUBSYSTEM_DEF(persistence)
 		var/season_name_first_letter = uppertext(copytext(season_name, 1, 2))
 		var/season_name_remainder = copytext(season_name, 2, length(season_name) + 1)
 		season_name = season_name_first_letter + season_name_remainder
-		message += "<span class='seasons_announce'><b>[season_name]</b> - season [season_progress[season_entry][CURRENT_SEASON_NUMBER]]<br></span>"
-		message += "<span class='season_additional_info'><b>Title:</b> [season_progress[season_entry][CURRENT_SEASON_NAME]]<br></span>"
-		message += "<span class='season_additional_info'><b>Description:</b> [season_progress[season_entry][CURRENT_SEASON_DESC]]<br></span>"
+		message += span_seasons_announce("<b>[season_name]</b> - season [season_progress[season_entry][CURRENT_SEASON_NUMBER]]<br>")
+		message += span_season_additional_info("<b>Title:</b> [season_progress[season_entry][CURRENT_SEASON_NAME]]<br>")
+		message += span_season_additional_info("<b>Description:</b> [season_progress[season_entry][CURRENT_SEASON_DESC]]<br>")
 
 	return message
 
@@ -204,7 +204,7 @@ SUBSYSTEM_DEF(persistence)
 		)
 
 /datum/season_datum/weapons/guns/pistol_seasonal_three
-	name = "Hiph-power pistols"
+	name = "High-power pistols"
 	description = "More pistols in the vendors, why not?"
 	item_list = list(
 		/obj/item/weapon/gun/pistol/vp78 = -1,
@@ -214,7 +214,7 @@ SUBSYSTEM_DEF(persistence)
 		)
 
 /datum/season_datum/weapons/guns/copsandrobbers_seasonal
-	name = "cops and robbers"
+	name = "Cops and robbers"
 	description = "A Revolver and a classic SMG. Truly cops and robbers."
 	item_list = list(
 		/obj/item/weapon/gun/smg/uzi = -1,

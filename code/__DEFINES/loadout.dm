@@ -187,13 +187,29 @@ GLOBAL_LIST_INIT(additional_admin_item_slot_list, list(
 	slot_ear_str,
 ))
 
-///All the vendor types which the automated loadout vendor can take items from
+///All the vendor types which the automated loadout vendor can take items from.
 GLOBAL_LIST_INIT(loadout_linked_vendor, list(
-	/obj/machinery/vending/marine/shared,
-	/obj/machinery/vending/uniform_supply,
-	/obj/machinery/vending/armor_supply,
-	/obj/machinery/vending/marineFood,
-	/obj/machinery/vending/MarineMed,
+	FACTION_NEUTRAL = list(
+		/obj/machinery/vending/marine/shared,
+		/obj/machinery/vending/uniform_supply,
+		/obj/machinery/vending/armor_supply,
+		/obj/machinery/vending/marineFood,
+		/obj/machinery/vending/MarineMed,
+	),
+	FACTION_TERRAGOV = list(
+		/obj/machinery/vending/marine/shared/hvh/team_one,
+		/obj/machinery/vending/uniform_supply,
+		/obj/machinery/vending/armor_supply/loyalist,
+		/obj/machinery/vending/marineFood,
+		/obj/machinery/vending/MarineMed,
+	),
+	FACTION_TERRAGOV_REBEL = list(
+		/obj/machinery/vending/marine/shared/hvh,
+		/obj/machinery/vending/uniform_supply,
+		/obj/machinery/vending/armor_supply/rebel,
+		/obj/machinery/vending/marineFood,
+		/obj/machinery/vending/MarineMed/rebel,
+	),
 ))
 
 GLOBAL_LIST_INIT(marine_clothes_listed_products, list(
@@ -518,7 +534,6 @@ GLOBAL_LIST_INIT(bypass_storage_content_save, typecacheof(list(
 	/obj/item/storage/pill_bottle/packet,
 )))
 
-
 //Defines use for the visualisation of loadouts
 #define NO_OFFSET "0%"
 #define NO_SCALING 1
@@ -528,5 +543,7 @@ GLOBAL_LIST_INIT(bypass_storage_content_save, typecacheof(list(
 ///The maximum number of loadouts one player can have
 #define MAXIMUM_LOADOUT 50
 
-/// The currently accepted loadout version, all other loadouts will be erased from savefiles
-#define CURRENT_LOADOUT_VERSION 5
+/// The current loadout version
+#define CURRENT_LOADOUT_VERSION 6
+
+GLOBAL_LIST_INIT(accepted_loadout_versions, list(5,6))
